@@ -2,11 +2,12 @@ import cv2
 import streamlit as st
 from video_input import frames
 import matplotlib.pyplot as plt
+import os
 import requests
 from twilio.rest import Client
 
-account_sid = ''
-auth_token = ''
+account_sid = os.environ.get('TWILIO_SID')
+auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
 client = Client(account_sid, auth_token)
 
 
